@@ -1,0 +1,11 @@
+1.Slider的BoxCollider2D设置时注意尺寸缩小一些（0.1f即可）
+
+2.SliderDragger增加GetMouseDraggingVector的鼠标轨迹向量或基于此向量的离散中心碰撞检测（更优）功能，避免穿透瞬移
+
+3.玩家动态遮罩问题<<OK>>
+
+4.Array.Fill(deletedTiles, tile);背景动态补全时的缺点：只能补充一种tile，而非复制删除的tile
+
+5.滑动时不能移动角色，主要问题在于填充的滞后性<<很严重！！！！！！>>
+--解决方案一：把fixedtimestamp调为0.2左右（原0.02）
+--解决方案二：改用边缘检测算法
